@@ -403,6 +403,14 @@ SECTIONS
     }
   ```
 
+# 8. 中断机制
+
+|GPIO管脚控制|使能中断|分发|分发使能|接口|接口使能<br>优先级|nIRQ<br>nFIQ|ARM核|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|配置模式|ICDISER|ICDIPTR|ICDDCR|CPU0<br>CPU1<br>CPU2<br>CPU3|ICCICR||CORE0<br>CORE1<br>CORE2<br>CORE3|
+
+
+
 
 # N. 附录
 
@@ -438,6 +446,7 @@ SECTIONS
 > - mov指令不能操作太大的立即数，那为什么bic、orr等可以？ARM指令除了mov指令,其他指令可以使用比较大的立即数吗？(`bic r0,#F0000000`)
 > - 链接方式？链接脚本和直接链接怎么编写？
 > - 汇编中怎么指定栈大小；
+> - 不同的异常模式有哪些应用场景？
 
 
 
